@@ -15,3 +15,4 @@ abbr -a -U -- mv 'mv -i'
 abbr -a -U -- rm 'rm -i'
 
 set -x LESS '--ignore-case --LONG-PROMPT'
+set -x VIDUAL 'vim'
