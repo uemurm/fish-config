@@ -15,6 +15,6 @@ abbr -a -U -- lt   'ls -tr'
 abbr -a -U -- mv 'mv -i'
 abbr -a -U -- rm 'rm -i'
 
-set -x LESS '--ignore-case --LONG-PROMPT --raw-control-chars'
+set -x LESS '--ignore-case --LONG-PROMPT --RAW-CONTROL-CHARS'
 set -x VISUAL 'vim'
 set -x OPENAI_API_KEY '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'
