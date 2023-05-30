@@ -14,6 +14,8 @@ abbr -a -U -- llta 'ls -hltra'
 abbr -a -U -- lt   'ls -tr'
 abbr -a -U -- mv 'mv -i'
 abbr -a -U -- rm 'rm -i'
+abbr -a -U -- p	   	'pushd'
+abbr -a -U -- d		'dirs'
 
 set -x LESS '--ignore-case --LONG-PROMPT --RAW-CONTROL-CHARS'
 set -x VISUAL 'vim'
