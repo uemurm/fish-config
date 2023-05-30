@@ -17,3 +17,9 @@ abbr -a -U -- rm 'rm -i'
 
 set -x LESS '--ignore-case --LONG-PROMPT --RAW-CONTROL-CHARS'
 set -x VISUAL 'vim'
+
+# Run `ssh-agent` on start-up in order to omit passphrase input.
+# But turned out that this variable is not set even though a process is already running.
+#if test -z $SSH_AGENT_PID
+#    eval (ssh-agent -c)
+#end
