@@ -4,18 +4,18 @@ set -g theme_date_format "+%F %H:%M"
 set -g theme_display_git_default_branch yes
 
 # Abbreviate
-abbr -a -U -- cp 'cp -i'
-abbr -a -U -- la   'ls -ha'
-abbr -a -U -- ll   'ls -hl'
-abbr -a -U -- lla  'ls -hla'
-abbr -a -U -- lld  'ls -hld'
-abbr -a -U -- llt  'ls -hltr'
-abbr -a -U -- llta 'ls -hltra'
-abbr -a -U -- lt   'ls -tr'
-abbr -a -U -- mv 'mv -i'
-abbr -a -U -- rm 'rm -i'
-abbr -a -U -- p	   	'pushd'
-abbr -a -U -- d		'dirs'
+abbr --add --universal -- cp 	'cp -i'
+abbr --add --universal -- la   	'ls -ha'
+abbr --add --universal -- ll   	'ls -hl'
+abbr --add --universal -- lla  	'ls -hla'
+abbr --add --universal -- lld  	'ls -hld'
+abbr --add --universal -- llt  	'ls -hltr'
+abbr --add --universal -- llta 	'ls -hltra'
+abbr --add --universal -- lt   	'ls -tr'
+abbr --add --universal -- mv 	'mv -i'
+abbr --add --universal -- rm	'rm -i'
+abbr --add --universal -- p   	'pushd'
+abbr --add --universal -- d	'dirs'
 
 set -x LESS '--ignore-case --LONG-PROMPT --RAW-CONTROL-CHARS'
 set -x VISUAL 'vim'
@@ -25,3 +25,6 @@ set -x VISUAL 'vim'
 #if test -z $SSH_AGENT_PID
 #    eval (ssh-agent -c)
 #end
+
+# Loae rbenv automatically.
+status --is-interactive; and source (rbenv init -|psub)
