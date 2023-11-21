@@ -17,6 +17,16 @@ abbr --add --universal -- rm	'rm -i'
 abbr --add --universal -- p   	'pushd'
 abbr --add --universal -- d	'dirs'
 
+abbr --add --universal -- dps		'docker ps --all'
+abbr --add --universal -- dimages	'docker images --all'
+abbr --add --universal -- dhistory	'docker history'
+abbr --add --universal -- dexec		'docker exec'
+abbr --add --universal -- dlogs		'docker logs'
+abbr --add --universal -- drm		'docker rm'
+abbr --add --universal -- drmi		'docker rmi'
+abbr --add --universal -- dstop		'docker stop'
+abbr --add --universal -- dpull		'docker pull'
+
 set -x LESS '--ignore-case --LONG-PROMPT --RAW-CONTROL-CHARS'
 set -x VISUAL 'vim'
 
