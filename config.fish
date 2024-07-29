@@ -4,18 +4,19 @@ set -g theme_date_format "+%F %H:%M"
 set -g theme_display_git_default_branch yes
 
 # Abbreviate
+abbr --add --universal -- la   	'ls -hFa'
+abbr --add --universal -- ll   	'ls -hFl'
+abbr --add --universal -- lla  	'ls -hFla'
+abbr --add --universal -- lld  	'ls -hFld'
+abbr --add --universal -- llt  	'ls -hFltr'
+abbr --add --universal -- llta 	'ls -hFltra'
+abbr --add --universal -- lt   	'ls -Ftr'
+
 abbr --add --universal -- cp 	'cp -i'
-abbr --add --universal -- la   	'ls -ha'
-abbr --add --universal -- ll   	'ls -hl'
-abbr --add --universal -- lla  	'ls -hla'
-abbr --add --universal -- lld  	'ls -hld'
-abbr --add --universal -- llt  	'ls -hltr'
-abbr --add --universal -- llta 	'ls -hltra'
-abbr --add --universal -- lt   	'ls -tr'
 abbr --add --universal -- mv 	'mv -i'
 abbr --add --universal -- rm	'rm -i'
 abbr --add --universal -- p   	'pushd'
-abbr --add --universal -- d	'dirs'
+abbr --add --universal -- d	    'dirs'
 
 abbr --add --universal -- dps		'docker ps --all'
 abbr --add --universal -- dimages	'docker images --all'
