@@ -35,6 +35,3 @@ set -x VISUAL 'vim'
 #if test -z $SSH_AGENT_PID
 #    eval (ssh-agent -c)
 #end
-
-# Loae rbenv automatically.
-status --is-interactive; and source (rbenv init -|psub)
