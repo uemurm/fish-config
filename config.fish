@@ -1,7 +1,7 @@
 # View
-set -g theme_display_date yes
-set -g theme_date_format "+%F %H:%M"
-set -g theme_display_git_default_branch yes
+set --global theme_display_date yes
+set --global theme_date_format "+%F %H:%M"
+set --global theme_display_git_default_branch yes
 
 # Abbreviate
 abbr --add --universal -- la   	'ls -hFa'
@@ -28,8 +28,8 @@ abbr --add --universal -- drmi		'docker rmi'
 abbr --add --universal -- dstop		'docker stop'
 abbr --add --universal -- dpull		'docker pull'
 
-set -x LESS '--ignore-case --LONG-PROMPT --RAW-CONTROL-CHARS'
-set -x VISUAL 'vim'
+set --export LESS '--ignore-case --LONG-PROMPT --RAW-CONTROL-CHARS'
+set --export VISUAL 'vim'
 
 # Run `ssh-agent` on start-up in order to omit passphrase input.
 # But turned out that this variable is not set even though a process is already running.
