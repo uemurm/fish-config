@@ -29,7 +29,7 @@ abbr --add --universal -- dstop		'docker stop'
 abbr --add --universal -- dpull		'docker pull'
 
 set --export LESS '--ignore-case --LONG-PROMPT --RAW-CONTROL-CHARS'
-set --export VISUAL 'vim'
+set --export VISUAL 'vi'
 
 # Run `ssh-agent` on start-up in order to omit passphrase input.
 # But turned out that this variable is not set even though a process is already running.
