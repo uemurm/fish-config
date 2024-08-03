@@ -49,24 +49,26 @@ function fish_prompt
     echo -n '┬─'
     set_color -o green
     echo -n [
-    if test "$USER" = root -o "$USER" = toor
-        set_color -o red
-    else
-        set_color -o green
-    end
-    echo -n $USER
-    set_color -o white
-    echo -n @
-    if [ -z "$SSH_CLIENT" ]
-        set_color -o blue
-    else
-        set_color -o cyan
-    end
-    echo -n (prompt_hostname)
-    set_color -o white
-    echo -n :(pwd)
-    # echo -n :(prompt_pwd)
+
+#   if test "$USER" = root -o "$USER" = toor
+#       set_color -o red
+#   else
+#       set_color -o green
+#   end
+#   echo -n $USER
+#   set_color -o white
+#   echo -n @
+#   if [ -z "$SSH_CLIENT" ]
+#       set_color -o blue
+#   else
+#       set_color -o cyan
+#   end
+#   echo -n (prompt_hostname)
+
+    set --global fish_prompt_pwd_dir_length 4
     set_color -o yellow
+    echo -n (prompt_pwd)
+    set_color -o green
     echo -n ']'
 
     # Date
@@ -102,7 +104,6 @@ function fish_prompt
     set_color normal
     set_color $retc
     echo -n '╰─>'
-    set_color -o red
     echo -n '$ '
     set_color normal
 end
