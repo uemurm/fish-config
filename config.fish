@@ -46,3 +46,8 @@ set --export VISUAL 'vi'
 #if test -z $SSH_AGENT_PID
 #    eval (ssh-agent -c)
 #end
+
+set WORK_CONFIG $HOME/.config/fish/work.fish
+if test -e "$WORK_CONFIG"
+    source $WORK_CONFIG
+end
