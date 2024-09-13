@@ -52,3 +52,7 @@ set --export VISUAL 'vi'
 #    eval (ssh-agent -c)
 #end
 
+set WORK_CONFIG $HOME/.config/fish/work.fish
+if test -e "$WORK_CONFIG"
+    source $WORK_CONFIG
+end
