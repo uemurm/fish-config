@@ -6,6 +6,7 @@ set --global theme_display_git_default_branch yes
 # Abbreviate
 abbr --add -- vi   	'vim'
 
+## General commands
 abbr --add -- ls   	'ls -F'
 abbr --add -- la   	'ls -hFa'
 abbr --add -- ll   	'ls -hFl'
@@ -21,6 +22,9 @@ abbr --add -- rm	'rm -i'
 abbr --add -- p   	'pushd'
 abbr --add -- d	    	'dirs'
 
+#
+# Git related
+#
 abbr --add -- gst	'git status'
 abbr --add -- gdiff	'git diff'
 abbr --add -- gbr	'git branch'
@@ -32,6 +36,9 @@ abbr --add -- gpl	'git pull'
 abbr --add -- gf	'git fetch'
 abbr --add -- glog	'git log'
 
+#
+# Docker related
+#
 abbr --add -- dps		'docker ps --all'
 abbr --add -- dimages	'docker images --all'
 abbr --add -- dhistory	'docker history'
@@ -45,6 +52,8 @@ abbr --add -- dpull		'docker pull'
 set --export LESS	'--ignore-case --LONG-PROMPT --RAW-CONTROL-CHARS'
 set --export LESSOPEN	'| /usr/share/source-highlight/src-hilite-lesspipe.sh %s'
 set --export VISUAL	'vi'
+
+set --universal fish_greeting	# Unset greeting from fish shell.
 
 # Run `ssh-agent` on start-up in order to omit passphrase input.
 # But turned out that this variable is not set even though a process is already running.
