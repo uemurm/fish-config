@@ -61,6 +61,17 @@ set --universal fish_greeting	# Unset greeting from fish shell.
 #    eval (ssh-agent -c)
 #end
 
+# Pyenv config
+set --export PYENV_ROOT	"$HOME/.pyenv"
+if test -d "$PYENV_ROOT/bin"
+    set --export PATH   "$PYENV_ROOT/bin:$PATH"
+end
+eval "$(pyenv init -)"
+
+# Add poetry and other commands to path
+set --export PATH   "$HOME/.local/bin:$PATH"
+
+# Work-related config
 set WORK_CONFIG $HOME/.config/fish/work.fish
 if test -e "$WORK_CONFIG"
     source $WORK_CONFIG
