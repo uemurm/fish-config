@@ -67,7 +67,7 @@ set --export PYENV_ROOT	"$HOME/.pyenv"
 if test -d "$PYENV_ROOT/bin"
     set --export PATH   "$PYENV_ROOT/bin:$PATH"
 end
-eval "$(pyenv init -)"
+pyenv init - | source  # Load pyenv automatically.
 
 # Add poetry and other commands to path
 set --export PATH   "$HOME/.local/bin:$PATH"
