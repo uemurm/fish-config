@@ -49,6 +49,7 @@ abbr --add -- drmi      'docker rmi'
 abbr --add -- dstop     'docker stop'
 abbr --add -- dpull     'docker pull'
 
+set --export CDPATH     $HOME/.config/
 set --export LESS       '--ignore-case --LONG-PROMPT --RAW-CONTROL-CHARS'
 set --export LESSOPEN   '| /usr/share/source-highlight/src-hilite-lesspipe.sh %s'
 set --export VISUAL     'vi'
