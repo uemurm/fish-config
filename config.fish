@@ -35,6 +35,7 @@ abbr --add -- gps   'git push'
 abbr --add -- gpl   'git pull'
 abbr --add -- gf    'git fetch'
 abbr --add -- glog  'git log'
+abbr --add -- gshow 'git show'
 
 #
 # Docker related
