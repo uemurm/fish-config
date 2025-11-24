@@ -16,3 +16,9 @@ set --universal fish_greeting   # Unset greeting from fish shell.
 #    eval (ssh-agent -c)
 #end
 
+# Abbreviations
+set ABBREVIATIONS $HOME/.config/fish/abbreviation.fish
+if test -e "$ABBREVIATIONS"
+    source $ABBREVIATIONS
+end
+
