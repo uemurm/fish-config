@@ -19,15 +19,17 @@ abbr --add -- vi    'vim'
 #
 # Git related
 #
-abbr --add -- gst   'git status'
+abbr --add -- gs    'git status'
 abbr --add -- gdiff 'git diff'
 abbr --add -- gbr   'git branch'
 abbr --add -- gadd  'git add'
 abbr --add -- gci   'git commit -m'
 abbr --add -- gco   'git checkout'
+abbr --add -- gp    'git push'
 abbr --add -- gps   'git push'
 abbr --add -- gpl   'git pull'
 abbr --add -- gf    'git fetch'
+abbr --add -- grs   'git reset'
 abbr --add -- glog  'git log'
 abbr --add -- gshow 'git show'
 
