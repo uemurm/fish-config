@@ -5,7 +5,16 @@ set --global theme_display_git_default_branch yes
 
 set --export CDPATH     $HOME/.config/
 set --export LESS       '--ignore-case --LONG-PROMPT --RAW-CONTROL-CHARS'
-set --export LESSOPEN   '| /usr/share/source-highlight/src-hilite-lesspipe.sh %s'
+
+switch (uname --kernel-name)
+case Linux
+    set --export LESSOPEN   '| /usr/share/source-highlight/src-hilite-lesspipe.sh %s'	# Mainly for WSL
+case 'CYGWIN*' 'MINGW*' 'MSYS*'
+    set --export LESSOPEN   '| /mingw64/bin/highlight --out-format=ansi %s'
+case '*'
+    echo "Unknown OS: "(uname -s)
+end
+
 set --export VISUAL     'vi'
 
 set --universal fish_greeting   # Unset greeting from fish shell.
