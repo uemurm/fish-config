@@ -46,7 +46,12 @@ function fish_prompt
     end
 
     set_color $retc
-    echo -n '┬─'
+    echo -n '┬'
+
+    # Date
+    _nim_prompt_wrapper $retc '' (date +%X)
+
+    echo -n '─'
     set_color -o green
     echo -n [
 
@@ -70,9 +75,6 @@ function fish_prompt
     echo -n (prompt_pwd)
     set_color -o green
     echo -n ']'
-
-    # Date
-    _nim_prompt_wrapper $retc '' (date +%X)
 
     # Virtual Environment
     set -q VIRTUAL_ENV_DISABLE_PROMPT
